@@ -671,12 +671,20 @@ video {
   height: 55px;
 }
 
+.h-\[56px\] {
+  height: 56px;
+}
+
 .max-h-25 {
   max-height: 100px;
 }
 
 .w-\[50px\] {
   width: 50px;
+}
+
+.w-\[51px\] {
+  width: 51px;
 }
 
 .flex-col {
@@ -739,6 +747,61 @@ video {
   padding-right: 2.5rem;
 }
 
+.px-11 {
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.px-14 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.px-\[50px\] {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.px-\[44px\] {
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
+.px-\[42px\] {
+  padding-left: 42px;
+  padding-right: 42px;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .pr-2 {
   padding-right: 0.5rem;
 }
@@ -753,6 +816,22 @@ video {
 
 .pl-20 {
   padding-left: 5rem;
+}
+
+.pr-40 {
+  padding-right: 10rem;
+}
+
+.pr-20 {
+  padding-right: 5rem;
+}
+
+.pr-16 {
+  padding-right: 4rem;
+}
+
+.pr-2\.5 {
+  padding-right: 0.625rem;
 }
 
 .text-center {
@@ -842,6 +921,10 @@ video {
 
 .leading-\[1\.2\] {
   line-height: 1.2;
+}
+
+.leading-\[56px\] {
+  line-height: 56px;
 }
 
 .text-\[rgba\(255\2c 255\2c 255\2c \.8\)\] {
