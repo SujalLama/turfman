@@ -2,16 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@layer base {
-}
-
 @layer components {
     .container {
-        @apply mx-auto px-[15px] max-w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1200px];
+        @apply mx-auto px-3.5 max-w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1200px];
     }
-}
-
-body {
-    @apply font-sans font-normal leading-normal text-base text-gray-dark;
 }
