@@ -32,6 +32,9 @@ module.exports = {
         'red': '#dc3545',
         'border-color': 'rgba(255,255,255,.2)'
       },
+      boxShadow: {
+        'sm': '0px 0px 16px -10px rgba(0, 0, 0, 0.3)',
+      },
       spacing: {
         3.5: '15px',
         25: '100px'
