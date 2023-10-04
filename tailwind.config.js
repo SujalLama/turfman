@@ -34,6 +34,7 @@ module.exports = {
       },
       boxShadow: {
         'sm': '0px 0px 16px -10px rgba(0, 0, 0, 0.3)',
+        'md': '0px 0px 10px -4px rgba(0, 0, 0, 0.3)',
       },
       spacing: {
         3.5: '15px',
