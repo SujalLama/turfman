@@ -15,6 +15,26 @@ module.exports = {
       xl: '1200px',
     },
     extend : {
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#888888',
+            lineHeight: '1.5',
+            ul : {
+              
+              paddingLeft: '1em'
+            },
+            p : {
+              marginTop: '1.6em',
+              marginBottom: '1.6em',
+            },
+            li : {
+              marginTop: '1em',
+              marginBottom: '1em',
+            }
+          },
+        }
+      },
       colors: {
         'primary': {
           lighter: '#7bdcb5',
@@ -35,6 +55,7 @@ module.exports = {
       boxShadow: {
         'sm': '0px 0px 16px -10px rgba(0, 0, 0, 0.3)',
         'md': '0px 0px 10px -4px rgba(0, 0, 0, 0.3)',
+        'lg': '0 0 30px rgba(0,0,0,.07)',
       },
       spacing: {
         3.5: '15px',
@@ -46,5 +67,7 @@ module.exports = {
     },
     container: false,
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
