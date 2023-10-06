@@ -13,7 +13,7 @@
     <title>Home page</title>
 </head>
 <body class="font-sans font-normal leading-normal text-base text-gray-text">
-	<header class="relative z-20">
+    <header class="relative z-20">
 		<!-- Start of Top header-->
         <div class="bg-gray-darker text-white h-[55px] leading-[55px] hidden lg:block">
             <div class="container flex justify-between">
@@ -131,11 +131,11 @@
             <div class="container">
                 <div class="bg-primary h-[68px] text-white 
                 font-display text-sm leading-[68px] font-medium tracking-[0.5px]
-                uppercase rounded-[3px] sticky top-0
+                uppercase rounded-[3px] 
                 ">
                     <div class="flex justify-between">
                         
-                        <nav class="">
+                        <nav class="h-full">
                             
                             <ul class="flex items-center">
                                 <li class="">
@@ -244,13 +244,14 @@
         </div>
     </header>	
 
+
     <!--Page Hero-->
     <section class="relative min-h-[300px] xl:-mt-[30px]">
-        <div class="absolute top-0 left-0 w-full h-full">
+        <div class="absolute top-0 left-0 w-full h-full -z-20">
             <img class="w-full h-full object-cover object-center" src="https://theturfman.com.au/wp-content/uploads/2020/09/sir-walter-turf-perth.jpg" alt="page hero">
         </div>
-        <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
-        <div class="absolute top-0 left-0 w-full h-full z-20">
+        <div class="absolute top-0 left-0 w-full h-full bg-black/50 -z-10"></div>
+        <div class="absolute top-0 left-0 w-full h-full z-10">
             
             <div class="py-16 px-7.5 h-full text-white sm:mx-auto sm:max-w-[540px] md:max-w-[720px] xl:px-3.5 large:max-w-[960px] xl:max-w-[1200px] flex  justify-center flex-col">
                 <h1 class="text-[30px] sm:text-[45px] leading-[40px] font-bold mb-4 sm:mb-5">About Us</h1>
@@ -265,42 +266,93 @@
     </section>
     <!--End of Page Hero-->
 
+    <!--content section-->
+    <section class="px-7.5 my-25 mx-auto xl:px-3.5 xl:max-w-[1200px]">
+        <div class="large:flex large:items-center">
+            <div class="large:w-1/2 large:mr-14">
+                <div class="mb-7.5">
+                    <h4 class="text-sm text-primary font-bold tracking-[2px] leading-[1.2] mb-[5px] uppercase">About us</h4>
+                    <h2 class="font-bold text-[25px] md:text-3xl leading-[1.4] large:leading-[1.3] large:text-[35px] xl:text-[40px] mb-2.5 text-gray-darker">
+                        Welcome to our Award Winning Company
+                    </h2>
+                </div>
+
+                <div class="prose prose-ul:marker:primary marker:text-primary marker:text-lg">
+                    <p>The Turf Man is Australia’s one of the best turf providers. We provide turf solutions for residential turf, commercial turf, urban 
+                        <a href="https://theturfman.com.au/pick-the-right-turf/">turf solutions</a>. We also provide Turf Installation and Turf Supply. Freshly cut grass will be available just near your location. Turf Man is just a call away for your need.</p>
+                    <p>We supply Wintergreen Couch, Premium Kikuyu, Villagegreen Kikuyu, Santa Anna and Cape Soft Buffalo turfs. We also provide Sir Walter Buffalo, Palmetto. Turf Man is one of the best turf providers in Western Australia. We are the whole seller for all major turf in
+                        <a href="https://www.google.com/maps/place/Unit+6%2F505+Walter+Rd+E,+Morley+WA+6062,+Australia/@-31.8941537,115.9230373,17z/data=!3m1!4b1!4m5!3m4!1s0x2a32b0a18fcfffff:0x288983d2038aa568!8m2!3d-31.8941537!4d115.925226?hl=en"> Perth</a>.
+                    </p>
+                    <ul>
+                        <li>
+                            Every project needs different variety of turf. We have collection different turf. 
+                        </li>
+                        <li>
+                            Providing platform to sell your grass with best market value. Even long term solutions.
+                        </li>
+                        <li>
+                            We have different varieties of product to manage health of grass-health of turf for different season.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="relative large:w-1/3">
+                <!-- <div class="flex flex-col items-center sm:flex-row sm:flex-wrap sm:justify-between">
+                    <div class="rounded-[5px] mb-4 text-center sm:w-full">
+                        <img class="rounded-[5px] w-full h-full object-cover object-center" src="https://theturfman.com.au/wp-content/uploads/2020/08/vehicle-630x250.jpg" width="630" height="250" alt="turf-instaling-vehicle-in-perth" title="vehicle-the-turfman">
+                    </div>
+                    <div class="rounded-[5px] mb-4 text-center sm:w-[calc(50%_-_10px)] sm:mr-5">
+                        <img class="rounded-[5px] w-full h-full object-cover object-center" src="https://theturfman.com.au/wp-content/uploads/2020/08/observing.jpg" width="290" height="260" alt="turf-inspection-in-perth" title="turf-inspection">
+                    </div>
+                    <div class="rounded-[5px] mb-4 sm:w-[calc(50%_-_10px)]">
+                        <img class="rounded-[5px] w-full h-full object-cover object-center" src="https://theturfman.com.au/wp-content/uploads/2020/08/stack-290x260.jpg" width="290" height="260" alt="quality-turf-in-perth" title="stack-of-turf">
+                    </div>
+                </div> -->
+                <img class="rounded-[5px] w-full" src="https://theturfman.com.au/wp-content/uploads/2020/08/observing.jpg" width="290" height="260" alt="turf-inspection-in-perth" title="turf-inspection">
+                
+            </div>
+        </div>
+    </section>
+    <!--end of content section-->
+
     <!--Icon section-->
     <section class="my-25 px-7.5 sm:mx-auto sm:max-w-[540px] md:max-w-[720px] xl:px-3.5 large:max-w-[960px] xl:max-w-[1200px]">
         <div class="my-12 border-t border-[#e7e7e7] ">
-            <div class="md:flex md:flex-wrap large:justify-between  md:-mx-6">
-                <div class="flex  my-8 md:mb-0  md:w-1/2 large:w-1/3 xl:w-1/4 md:px-12 lg:px-8 xl:px-12">
+            <div class="md:flex md:flex-wrap large:justify-between">
+                <div class="flex  my-8 md:mb-0  md:w-1/2 large:w-1/3 xl:w-1/4 ">
                     <div class=" mr-7.5 large:mr-3.5  text-primary">
                         <i class="fa-regular fa-id-card text-[55px]" ></i>
                     </div>			
-                    <div class="">
+                    <div class="md:w-28">
                         <h2 class="text-[36px] leading-[1.1] text-gray-darker font-black">3545</h2>				
                         <p class="mb-2.5">Total Projects</p>					
                     </div>
                 </div>
-                <div class="flex  my-8 md:mb-0  md:w-1/2 large:w-1/3 xl:w-1/4 md:border-l md:border-[#e7e7e7] md:px-12 lg:px-8 xl:px-12 ">
+                <div class="flex md:justify-center  my-8 md:mb-0  md:w-1/2 large:w-1/3 xl:w-1/4 md:border-l md:border-[#e7e7e7]  ">
                     <div class=" mr-7.5 large:mr-3.5  text-primary">
                         <i class="fa-regular fa-id-card text-[55px]" ></i>
                     </div>			
-                    <div class="">
+                    <div class="md:w-28">
                         <h2 class="text-[36px] leading-[1.1] text-gray-darker font-black">12</h2>				
                         <p class="mb-2.5">Turf Types</p>					
                     </div>
                 </div>
-                <div class="flex  my-8 md:mb-0  md:w-1/2 large:w-1/3 xl:w-1/4 large:border-l large:border-[#e7e7e7] md:px-12 lg:px-8 xl:px-12">
+                <div class="flex large:justify-center  my-8 md:mb-0  md:w-1/2 large:w-1/3 xl:w-1/4 large:border-l large:border-[#e7e7e7] ">
                     <div class=" mr-7.5 large:mr-3.5  text-primary">
                         <i class="fa-regular fa-id-card text-[55px]" ></i>
                     </div>			
-                    <div class="">
+                    <div class="md:w-28">
                         <h2 class="text-[36px] leading-[1.1] text-gray-darker font-black">5982</h2>				
                         <p class="mb-2.5">Happy Clients</p>					
                     </div>
                 </div>
-                <div class="flex  my-8 md:mb-0  md:w-1/2 large:w-1/3 xl:w-1/4 md:border-l md:border-[#e7e7e7] md:px-12 large:border-l-0 xl:border-l xl:border-[#e7e7e7] lg:px-8 xl:px-12">
+                <div class="flex md:justify-center large:justify-start xl:justify-center my-8 md:mb-0  md:w-1/2 large:w-1/3 xl:w-1/4 md:border-l md:border-[#e7e7e7]  large:border-l-0 xl:border-l xl:border-[#e7e7e7]">
                     <div class=" mr-7.5 large:mr-3.5  text-primary">
                         <i class="fa-regular fa-id-card text-[55px]" ></i>
                     </div>			
-                    <div class="">
+                    <div class="md:w-28">
                         <h2 class="text-[36px] leading-[1.1] text-gray-darker font-black">4</h2>				
                         <p class="mb-2.5">Charity to Organization</p>					
                     </div>
@@ -309,6 +361,70 @@
         </div>
     </section>
     <!--End of Icon section-->
+
+    <!--Service icon section-->
+    <section class="bg-[url(https://theturfman.com.au/wp-content/uploads/2020/09/turf-in-Western-Australia.jpg?id=13724)] bg-cover bg-center">
+        <div class="px-7.5 py-25 sm:mx-auto sm:max-w-[540px] md:max-w-[720px] xl:px-3.5 large:max-w-[960px] xl:max-w-[1200px] text-white">
+            
+            <div class="mb-[80px] md:flex md:-mx-5">
+                <div class="md:w-1/2 md:px-5">
+                    <h4 class="text-[13px] mb-1.5 md:text-[14px] tracking-[2px] uppercase font-bold text-[rgba(255,255,255,.95)]">services offered</h4>
+                    <h2 class="text-[25px] md:text-[30px] large:text-[35px] font-bold mb-5">We always ready to provide different services</h2>
+                </div>
+
+                <p class="text-white/90 md:w-1/2 md:px-5">Each field task needs different gears and different expertise solutions.<strong class="text-white"> The turf man</strong>  not only handles services but also care for work health, safety and customer service.</p>
+            </div>
+
+            <div class="md:flex md:flex-wrap md:-mx-5">
+                <div class="mb-10 md:w-[calc(50%_-_40px)] large:w-[calc(33.33%_-_40px)] xl:w-[calc(25%_-_40px)] md:mx-5 p-7.5 bg-border-color border border-border-color rounded-[5px] text-center hover:border-primary">
+                    <i class="fa-brands fa-square-font-awesome-stroke text-primary text-[50px] mb-7.5"></i>
+                    <h3 class="font-bold text-[22px] mb-[8px] leading-tight">Soil preparation</h3>
+                    <p class="text-white/90">Removal of old lawn, weeds at required pace.</p>
+                </div>
+
+                <div class="mb-10 md:w-[calc(50%_-_40px)] large:w-[calc(33.33%_-_40px)] xl:w-[calc(25%_-_40px)] md:mx-5 p-7.5 bg-border-color border border-border-color rounded-[5px] text-center hover:border-primary">
+                    <i class="fa-brands fa-square-font-awesome-stroke text-primary text-[50px] mb-7.5"></i>
+                    <h3 class="font-bold text-[22px] mb-[8px] leading-tight">Leveling, measuring</h3>
+                    <p class="text-white/90">Handling curvature, surfaces, debris</p>
+                </div>
+
+                <div class="mb-10 md:w-[calc(50%_-_40px)] large:w-[calc(33.33%_-_40px)] xl:w-[calc(25%_-_40px)] md:mx-5 p-7.5 bg-border-color border border-border-color rounded-[5px] text-center hover:border-primary">
+                    <i class="fa-brands fa-square-font-awesome-stroke text-primary text-[50px] mb-7.5"></i>
+                    <h3 class="font-bold text-[22px] mb-[8px] leading-tight">Soil Improvement</h3>
+                    <p class="text-white/90">Organic solutions, Assistance to root developments.</p>
+                </div>
+
+                <div class="mb-10 md:w-[calc(50%_-_40px)] large:w-[calc(33.33%_-_40px)] xl:w-[calc(25%_-_40px)] md:mx-5 p-7.5 bg-border-color border border-border-color rounded-[5px] text-center hover:border-primary">
+                    <i class="fa-brands fa-square-font-awesome-stroke text-primary text-[50px] mb-7.5"></i>
+                    <h3 class="font-bold text-[22px] mb-[8px] leading-tight">Laying</h3>
+                    <p class="text-white/90">Quick spreading roll. Managing curves, corners</p>
+                </div>
+
+                <div class="mb-10 md:w-[calc(50%_-_40px)] large:w-[calc(33.33%_-_40px)] xl:w-[calc(25%_-_40px)] md:mx-5 p-7.5 bg-border-color border border-border-color rounded-[5px] text-center hover:border-primary">
+                    <i class="fa-brands fa-square-font-awesome-stroke text-primary text-[50px] mb-7.5"></i>
+                    <h3 class="font-bold text-[22px] mb-[8px] leading-tight">Watering, Fertiliser</h3>
+                    <p class="text-white/90">Depends upon turf slow release fertiliser or fast release fertiliser selection.</p>
+                </div>
+            
+            </div>
+        
+        </div>
+    </section>
+    <!--End of Service Icon section-->
+
+    <!--Quote section : same as reach section in index.html-->
+    <section class="bg-[url(https://theturfman.com.au/wp-content/uploads/2020/09/img-08-1.jpg?id=13764)] bg-cover bg-center relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full  before:z-10 before:bg-primary/80">
+        <div class="px-7.5 py-25 mx-auto text-white relative z-10 sm:max-w-[540px] md:max-w-[720px] large:max-w-[960px]  xl:px-3.5 xl:max-w-[1200px]">
+            <div class="large:flex large:items-center large:justify-between">
+                <h2 class="text-[36px] text-center font-bold leading-tight large:text-left large:w-1/2 xl:w-3/5 large:mr-12">Do you have grass farm which you would like to sell or manage?</h2>
+                <div class="mt-16 text-center px-8 large:px-0 sm:mt-12 large:mt-0 large:flex large:items-center">
+                    <a href="#" class="w-full sm:w-1/2 md:w-auto md:mr-4 inline-block bg-gray-darker hover:bg-white transition-all ease-in-out duration-500 text-white hover:text-gray-darker  tracking-[1px] font-medium leading-[24px] text-[13px] py-3.5 px-7.5 border-[2px] border-gray-darker hover:border-white uppercase rounded-[5px] font-display mb-4 large:mb-0">Get Quote</a>
+                    <a href="#" class="w-full sm:w-1/2 md:w-auto inline-block hover:bg-white transition-all ease-in-out duration-500 text-white hover:text-gray-darker  tracking-[1px] font-medium leading-[24px] text-[13px] py-3.5 px-7.5 border-[2px] border-white uppercase rounded-[5px] font-display">Manage Turf</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End of Quote section-->
 
     <!--footer-->
     <footer class="bg-[url(https://theturfman.com.au/wp-content/uploads/2020/10/theturfman-footer-min.jpg)] bg-cover bg-center">
