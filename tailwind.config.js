@@ -47,7 +47,12 @@ module.exports = {
           DEFAULT: '#6c757d',
           'dark': '#343a40',
           'text': '#888888',
-          'darker': '#252525'
+          'darker': '#252525',
+          'border': 'rgba(255,255,255,.2)'
+        },
+        black: {
+          light: '#222',
+          DEFAULT: '#000'
         },
         'red': '#dc3545',
         'border-color': 'rgba(255,255,255,.2)'
@@ -58,8 +63,11 @@ module.exports = {
         'lg': '0 0 30px rgba(0,0,0,.07)',
       },
       spacing: {
+        '0.25': '1px',
         3.5: '15px',
-        25: '100px'
+        7.5: '30px',
+        25: '100px',
+        
       },
       screens: {
         'large': '992px',
