@@ -71,6 +71,9 @@ module.exports = {
       },
       screens: {
         'large': '992px',
+      },
+      animation: {
+        'ping-slow': 'ping 1s cubic-bezier(0, 0, 0.2, 1) 200ms infinite'
       }
     },
     container: false,

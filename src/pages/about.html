@@ -267,6 +267,21 @@
     </section>
     <!--End of Page Hero-->
 
+    <!--
+        video overlay
+        instructions: make this active, when clicked in video block
+    -->
+        <!-- <div class="fixed top-0 left-0 w-full h-full bg-black/80 z-[100]">
+            <div class="flex flex-col items-end justify-center h-full w-full max-w-[900px]  mx-auto text-right px-3.5">
+                
+                    <button class="mb-2 font-bold text-xl">x</button>
+                    <iframe src="https://www.youtube.com/" class="w-full">
+                    </iframe>
+                
+            </div>
+        </div> -->
+    <!--end of video overlay-->
+
     <!--content section-->
     <section class="px-7.5 my-25 mx-auto xl:px-3.5 xl:max-w-[1200px]">
         <div class="large:flex large:items-center">
@@ -347,8 +362,22 @@
             </div>
 
             <div class="relative large:w-1/2 large:pl-[70px]">
-                <img class="rounded-[5px] w-full" src="https://theturfman.com.au/wp-content/uploads/2020/08/observing.jpg" width="290" height="260" alt="turf-inspection-in-perth" title="turf-inspection">
-                
+                <!--video block-->
+                <a href="#" class="relative group">
+                    <img class="rounded-[5px] w-full cursor-pointer" src="https://theturfman.com.au/wp-content/uploads/2020/08/observing.jpg" width="290" height="260" alt="turf-inspection-in-perth" title="turf-inspection">
+                    
+                    <!--play button-->
+                    <div class="hidden group-hover:block absolute w-[65px] h-[65px] rounded-full bg-white/80 text-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+                        <i class="fa-solid fa-play text-xl leading-[65px]"></i>
+                        <div class=" w-[65px] h-[65px] border-8 border-white/80 p-2 motion-safe:animate-ping rounded-full absolute top-0">
+
+                        </div>
+                        <div class=" w-[65px] h-[65px] border-8 border-white/80 p-4 motion-safe:animate-ping-slow rounded-full absolute top-0">
+
+                        </div>
+                    </div>
+                </a>
+
                 <!-- custom list content -->
                 <div class="my-10 prose marker:text-2xl marker:leading-[0] prose-ul:pl-6 marker:text-primary prose-li:font-bold prose-li:my-2">
                     <p>We offer:</p>
