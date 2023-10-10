@@ -1446,6 +1446,26 @@ select {
   margin-right: 2px;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.-mx-2 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .-mr-10 {
   margin-right: -2.5rem;
 }
@@ -1654,6 +1674,18 @@ select {
   margin-bottom: 5rem;
 }
 
+.mt-25 {
+  margin-top: 100px;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1724,6 +1756,10 @@ select {
 
 .h-\[60px\] {
   height: 60px;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .max-h-25 {
@@ -1798,6 +1834,10 @@ select {
   width: 20%;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .max-w-\[800px\] {
   max-width: 800px;
 }
@@ -1836,6 +1876,10 @@ select {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-end {
@@ -2025,6 +2069,10 @@ select {
   border-color: rgb(220 53 69 / var(--tw-border-opacity));
 }
 
+.border-black\/20 {
+  border-color: rgb(0 0 0 / 0.2);
+}
+
 .bg-\[rgba\(0\2c 0\2c 0\2c 0\.0\)\] {
   background-color: rgba(0,0,0,0.0);
 }
@@ -2081,6 +2129,26 @@ select {
 .bg-\[\#f7f9fa\] {
   --tw-bg-opacity: 1;
   background-color: rgb(247 249 250 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#55ACEE\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(85 172 238 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#3B5998\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 89 152 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#2c4762\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(44 71 98 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#cb2027\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 32 39 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(https\:\/\/theturfman\.com\.au\/wp-content\/uploads\/2020\/09\/img-08-1\.jpg\?id\=13764\)\] {
@@ -2415,6 +2483,10 @@ select {
   padding-top: 0.5rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -2655,6 +2727,10 @@ select {
 
 .leading-snug {
   line-height: 1.375;
+}
+
+.leading-10 {
+  line-height: 2.5rem;
 }
 
 .tracking-\[0\.5px\] {
@@ -3461,6 +3537,10 @@ select {
 
   .md\:w-\[calc\(50\%_-_2rem\)\] {
     width: calc(50% - 2rem);
+  }
+
+  .md\:w-1\/3 {
+    width: 33.333333%;
   }
 
   .md\:max-w-\[720px\] {
