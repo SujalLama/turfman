@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/0467f5e0bb.js" crossorigin="anonymous"></script>
     <link href="/dist/output.css" rel="stylesheet">
 
-    <title>Cart page</title>
+    <title>Checkout page</title>
 </head>
 <body class="font-sans font-normal leading-normal text-base text-gray-text">
     <header class="relative z-20">
@@ -245,6 +245,7 @@
         </div>
     </header>	
 
+
     <!--Page Hero-->
     <section class="relative min-h-[300px] xl:-mt-[30px]">
         <div class="absolute top-0 left-0 w-full h-full -z-20">
@@ -254,11 +255,11 @@
         <div class="absolute top-0 left-0 w-full h-full z-10">
             
             <div class="py-16 px-7.5 h-full text-white sm:mx-auto sm:max-w-[540px] md:max-w-[720px] xl:px-3.5 large:max-w-[960px] xl:max-w-[1200px] flex  justify-center flex-col">
-                <h1 class="text-[30px] sm:text-[45px] leading-[40px] font-bold mb-4 sm:mb-5">Cart</h1>
+                <h1 class="text-[30px] sm:text-[45px] leading-[40px] font-bold mb-4 sm:mb-5">Checkout</h1>
                 <div class="text-sm font-display font-medium">
                     <a href="./index.html" class="hover:text-primary">The Turfman Perth</a>
                     <span class="px-1">></span>
-                    <span>Cart</span>
+                    <span>Checkout</span>
                 </div>
             </div>
         </div>
@@ -267,244 +268,190 @@
     <!--End of Page Hero-->
 
     <main class="my-25 px-7.5 mx-auto relative z-10 sm:max-w-[540px] md:max-w-[720px] large:max-w-[960px]  xl:px-3.5 xl:max-w-[1200px]">
+        <form name="checkout" method="post" class="checkout woocommerce-checkout" action="https://theturfman.com.au/checkout/" enctype="multipart/form-data" novalidate="novalidate">
+
+	
+		
+            <div class="" id="customer_details">
+                <div class="">
+                    <div class="woocommerce-billing-fields">
+                    <h3>Billing details</h3>
         
-        <!-- no item in cart -->
-
-        <!-- <div class="p-7.5 border-t-[3px] border-primary bg-gray/10 mb-8 flex">
-            <i class="fa-solid fa-cart-shopping mr-3 text-primary"></i>
-            <span class="text-gray-darker -mt-1">Your cart is currently empty</span>
-        </div>
-        <a href="./shops.html" class="inline-block bg-gray-darker text-center py-4 px-7.5 text-sm rounded-[5px] text-white tracking-[1px] font-bold uppercase  hover:bg-primary transition-colors duration-500 ease-in-out disabled:bg-gray-300 ">
-            Return to shop
-        </a> -->
-
-        <!--item added in cart-->
-        <div>
-            <h2 class="font-bold text-gray-darker text-[28px] mb-4">Cart Items</h2>
-            <div class="overflow-x-scroll">
-                <table class="w-full">
-                    <thead>
-                        <tr class="">
-                            <th class="border text-left px-4 py-2">Thumbnail image</th>
-                            <th class="border text-left px-4 py-2">Product</th>
-                            <th class="border text-left px-4 py-2">Price</th>
-                            <th class="border text-left px-4 py-2">Quantity</th>
-                            <th class="border text-left px-4 py-2">Subtotal</th>
-                            <th class="border text-left px-4 py-2">Remove item</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr class="">
-                            <td class="border px-4 py-2">
-                                <a href="https://theturfman.com.au/product/kikuyu/" class="w-25 h-25 block">
-                                    <img width="300" height="300" src="https://theturfman.com.au/wp-content/uploads/2020/06/Kikiyu-300x300.jpeg" 
-                                        class="w-full h-full object-cover object-center" alt="buy-Kikuyu-turf" loading="lazy" srcset="https://theturfman.com.au/wp-content/uploads/2020/06/Kikiyu-300x300.jpeg 300w, https://theturfman.com.au/wp-content/uploads/2020/06/Kikiyu-150x150.jpeg 150w, https://theturfman.com.au/wp-content/uploads/2020/06/Kikiyu-770x768.jpeg 770w, https://theturfman.com.au/wp-content/uploads/2020/06/Kikiyu-100x100.jpeg 100w" sizes="(max-width: 300px) 100vw, 300px" data-id="13832">
-                                </a>						
-                            </td>
-    
-                            <td class="border px-4 py-2">
-                                <a href="https://theturfman.com.au/product/kikuyu/">Kikuyu</a>						
-                            </td>
-    
-                            <td class="border px-4 py-2">
-                                <span>$10.00</span>						
-                            </td>
-    
-                            <td class="border px-4 py-2">
-                                
-                                <input type="number" value="1" title="Qty" size="4" min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                            </td>
-    
-                            <td class="border px-4 py-2">
-                                <span>$10.00</span>						
-                            </td>
-    
-                            <td class="border px-4 py-2 text-center">
-                                <button class="text-red text-3xl"><i class="fa-solid fa-xmark"></i></button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <section class=" my-10">
-                <div class="lg:w-[60%] mb-6 ">
-                    <h2 class="font-bold text-gray-darker text-[28px] mb-4">Cart totals</h2>
-    
-                    <table cellspacing="0" class="w-full">
-    
-                        <tbody>
-                            <tr class="">
-                                <th class="border px-4 py-2">Subtotal</th>
-                                <td class="border px-4 py-2">
-                                    <span class=""><bdi><span class="">$</span>21.00</bdi></span>
-                                </td>
-                            </tr>
-    
-                            <tr class="">
-                                <th class="border px-4 py-2">Shipping</th>
-                                <td class="border px-4 py-2">
-                                    Enter your address to view shipping options.
-                        
-                                    
-                                    <form class="" action="https://theturfman.com.au/cart/" method="post">
-    
-                                        <a href="#" class="mb-2 inline-block">Calculate shipping <i class="fa-solid fa-arrow-down"></i></a>
-                                        <div>
-                                            <div class="lg:flex lg:justify-between mb-2">
-                                                <label class="w-1/2">Country / region:</label>
-                                                <select name="calc_shipping_country" class="lg:flex-1 border-1 border-gray/20 text-gray-darker p-3.5 rounded-[5px] focus:border-primary focus:ring-primary placeholder:text-black/30">
-                                                    <option value="default">Select a country / region…</option>
-                                                    <option value="AU" selected="selected">Australia</option>				
-                                                </select>
-                                            </div>
-                                            <div class="lg:flex lg:justify-between mb-2">
-                                                <label class="w-1/2">State&nbsp;</label>
-                                                <select name="calc_shipping_country" class="lg:flex-1 border-1 border-gray/20 text-gray-darker p-3.5 rounded-[5px] focus:border-primary focus:ring-primary placeholder:text-black/30">
-                                                    <option value="default">Select an option…</option>
-                                                    <option value="ACT">Australian Capital Territory</option>
-                                                    <option value="NSW">New South Wales</option>
-                                                    <option value="NT">Northern Territory</option>
-                                                    <option value="QLD">Queensland</option>
-                                                    <option value="SA">South Australia</option>
-                                                    <option value="TAS">Tasmania</option>
-                                                    <option value="VIC">Victoria</option>
-                                                    <option value="WA">Western Australia</option>				
-                                                </select>
-                                            </div>
-                                            <div class="lg:flex lg:justify-between mb-2">
-                                                <label class="w-1/2">Suburb&nbsp;</label>
-                                                <input type="text" class="lg:flex-1 border-1 border-gray/20 text-gray-darker p-3.5 rounded-[5px] focus:border-primary focus:ring-primary placeholder:text-black/30" value="" placeholder="City" name="calc_shipping_city" id="calc_shipping_city">
-                                            </div>
-                                            <div class="lg:flex lg:justify-between">
-                                                <label class="w-1/2">Postcode&nbsp;</label>
-                                                <input type="text" class="lg:flex-1 border-1 border-gray/20 text-gray-darker p-3.5 rounded-[5px] focus:border-primary focus:ring-primary placeholder:text-black/30" value="" placeholder="Postcode / ZIP" name="calc_shipping_postcode" id="calc_shipping_postcode">
-                                            </div>
-                                        
-                                        </div>
-                                    </form>
-    
-                                </td>
-                            </tr>
-    
-                            <tr class="">
-                                <th class="border px-4 py-2">Total</th>
-                                <td class="border px-4 py-2"><strong><span class=""><bdi><span class="woocommerce-Price-currencySymbol">$</span>21.00</bdi></span></strong> <small class="includes_tax">(includes <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>1.91</span> GST)</small></td>
-                            </tr>
-    
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="lg:w-[60%]">
-                    <div class="mb-6 lg:flex"> 
-                        <input type="text" name="coupon_code" class="w-full border-1 lg:mr-4 border-gray/20 text-gray-darker py-4 px-7.5 rounded-[5px] focus:border-primary focus:ring-primary placeholder:text-black/30" id="coupon_code" value="" placeholder="Coupon code"> 
-                        <button type="submit" class="block hover:bg-primary mt-1 lg:mt-0 bg-gray-darker text-center py-4 px-7.5 text-sm rounded-[5px] text-white tracking-[1px] font-bold uppercase w-full transition-colors duration-500 ease-in-out" name="apply_coupon" value="Apply coupon">Apply coupon</button>
+                    <div class="woocommerce-billing-fields__field-wrapper">
+                        <p class="form-row textarea Array Order notes Notes about your order, e.g. special notes for delivery. validate-required" id="billing_first_name_field" data-priority="10"><label for="billing_first_name" class="">First name&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_first_name" id="billing_first_name" placeholder="" value="" autocomplete="given-name"></span></p><p class="form-row form-row-wide" id="billing_company_field" data-priority="30"><label for="billing_company" class="">Company name&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_company" id="billing_company" placeholder="" value="" autocomplete="organization"></span></p><p class="form-row form-row-wide d-none validate-required" id="billing_country_field" data-priority="40"><label for="billing_country" class="">Country / Region&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><strong>Australia</strong><input type="hidden" name="billing_country" id="billing_country" value="AU" autocomplete="country" class="country_to_state" readonly="readonly"></span></p><p class="form-row address-field validate-required form-row-wide" id="billing_address_1_field" data-priority="50"><label for="billing_address_1" class="">Street address&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_address_1" id="billing_address_1" placeholder="House number and street name" value="" autocomplete="address-line1" data-placeholder="House number and street name"></span></p><p class="form-row address-field validate-required form-row-wide" id="billing_city_field" data-priority="70" data-o_class="form-row form-row-wide address-field validate-required"><label for="billing_city" class="">Suburb&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_city" id="billing_city" placeholder="" value="" autocomplete="address-level2"></span></p><p class="form-row address-field validate-required validate-state form-row-wide" id="billing_state_field" data-priority="80" data-o_class="form-row form-row-wide address-field validate-required validate-state"><label for="billing_state" class="">State&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><div class="thsn-select"><select name="billing_state" id="billing_state" class="state_select select2-hidden-accessible" autocomplete="address-level1" data-placeholder="Select an option…" data-input-classes="" data-label="State" tabindex="-1" aria-hidden="true"><option value="">Select an option…</option><option value="ACT">Australian Capital Territory</option><option value="NSW">New South Wales</option><option value="NT">Northern Territory</option><option value="QLD">Queensland</option><option value="SA">South Australia</option><option value="TAS">Tasmania</option><option value="VIC">Victoria</option><option value="WA">Western Australia</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-label="State" role="combobox"><span class="select2-selection__rendered" id="select2-billing_state-container" role="textbox" aria-readonly="true" title="Western Australia">Western Australia</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></div></span></p><p class="form-row address-field validate-required validate-postcode form-row-wide" id="billing_postcode_field" data-priority="90" data-o_class="form-row form-row-wide address-field validate-required validate-postcode"><label for="billing_postcode" class="">Postcode&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_postcode" id="billing_postcode" placeholder="" value="" autocomplete="postal-code"></span></p><p class="form-row form-row-wide validate-required validate-phone" id="billing_phone_field" data-priority="100"><label for="billing_phone" class="">Phone&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="tel" class="input-text " name="billing_phone" id="billing_phone" placeholder="" value="" autocomplete="tel"></span></p><p class="form-row form-row-wide validate-required validate-email" id="billing_email_field" data-priority="110"><label for="billing_email" class="">Email address&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="email" class="input-text " name="billing_email" id="billing_email" placeholder="" value="" autocomplete="email"></span></p><p class="form-row my-field-class form-row-wide" id="billing_clientabn_field" data-priority=""><label for="billing_clientabn" class="">Client ABN&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_clientabn" id="billing_clientabn" placeholder="Client ABN" value=""></span></p></div>
                     </div>
+        
+                    <div class="woocommerce-account-fields">
+                
+                    <p class="form-row form-row-wide create-account woocommerce-validated">
+                        <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                            <input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" type="checkbox" name="createaccount" value="1"> <span>Create an account?</span>
+                        </label>
+                    </p>
+        
+                
+                
+                
+                    <div class="create-account" style="display: none;">
+                                            <p class="form-row validate-required" id="account_username_field" data-priority=""><label for="account_username" class="">Account username&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="account_username" id="account_username" placeholder="Username" value="" autocomplete="username"></span></p>									<p class="form-row validate-required" id="account_password_field" data-priority=""><label for="account_password" class="">Create account password&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper password-input"><input type="password" class="input-text " name="account_password" id="account_password" placeholder="Password" value="" autocomplete="new-password"><span class="show-password-input"></span></span></p>								<div class="clear"></div>
+                    </div>
+        
+                
+                    </div>
+                </div>
+    
+                <div class="">
+                    <div class="woocommerce-shipping-fields">
+        
+            <h3 id="ship-to-different-address">
+                <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                    <input id="ship-to-different-address-checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" type="checkbox" name="ship_to_different_address" value="1"> <span>Ship to a different address?</span>
+                </label>
+            </h3>
+    
+            <div class="shipping_address" style="display: none;">
     
                 
-                    <a href="./checkout.html" class="block bg-primary hover:bg-gray-darker text-center py-4 px-7.5 text-sm rounded-[5px] text-white tracking-[1px] font-bold uppercase w-full transition-colors duration-500 ease-in-out">
-                        Proceed to checkout
-                    </a>
-                </div>
-            </section>
-
-            <!--related products-->
-            <div class="my-25">
-            
-                <h2 class="font-bold text-gray-darker text-[28px] mb-4">Related Products</h2>
-                <div class="md:flex md:flex-wrap md:items-start md:-mx-2.5">
-                    <div class="mb-5 md:w-[calc(50%_-_20px)] large:w-[calc(33.33%_-_20px)] xl:w-[calc(25%_-_20px)] md:mx-2.5 border rounded-[5px]">
-                        <a href="./product-single.html" class="w-full">
-                            <img  src="https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-300x300.jpg" class="w-full rounded-t-[5px]" alt="Soft-Leaf-Buffalo-turf" loading="lazy" srcset="https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-300x300.jpg 300w, https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-150x150.jpg 150w, https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px">
-                        </a>
-        
-                        <div class="p-4">
-                            <span class="text-base pb-2 inline-block">
-                                <span class="font-bold">$13.50</span>
-                            </span>
-                            <h2 class="pb-2 text-gray-darker font-semibold text-2xl">Cape Soft leaf Buffalo</h2>
-                            <p class="line-clamp-2 leading-snug">Cape Soft-Leaf Buffalo, a new variety buffalo introduced by <a href="https://theturfman.com.au/">TheTurfMan</a> has an average water usage requirement but isn’t as drought tolerant as some of the other varieties of buffalo out there. Its durability is good, with the thick grass providing people and pets with a soft surface to walk and rest on. It also shows great recovery to damage throughout the year. Its maintenance remains low like all Buffo grass, and due to its thickness and high matt, weeds are prevented from growing through.</p>
-                            <a href="./product-single.html"  class="underline text-sm tracking-[0.5px] hover:text-primary inline-block" data-product_id="" data-product_sku="" aria-label="Read more about “Cape Soft leaf Buffalo”">
-                                Read more
-                            </a>
-                            
-                            <button class="block mt-6 bg-primary hover:bg-gray-darker text-center py-4 px-7.5 text-sm rounded-[5px] text-white tracking-[1px] font-bold uppercase w-full transition-colors duration-500 ease-in-out disabled:bg-red disabled:cursor-not-allowed">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="mb-5 md:w-[calc(50%_-_20px)] large:w-[calc(33.33%_-_20px)] xl:w-[calc(25%_-_20px)] md:mx-2.5 border rounded-[5px]">
-                        <a href="./product-single.html" class="w-full">
-                            <img  src="https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-300x300.jpg" class="w-full rounded-t-[5px]" alt="Soft-Leaf-Buffalo-turf" loading="lazy" srcset="https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-300x300.jpg 300w, https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-150x150.jpg 150w, https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px">
-                        </a>
-        
-                        <div class="p-4">
-                            <span class="text-base pb-2 inline-block">
-                                <span class="font-bold">$13.50</span>
-                            </span>
-                            <h2 class="pb-2 text-gray-darker font-semibold text-2xl">Cape Soft leaf Buffalo</h2>
-                            <p class="line-clamp-2 leading-snug">Cape Soft-Leaf Buffalo, a new variety buffalo introduced by <a href="https://theturfman.com.au/">TheTurfMan</a> has an average water usage requirement but isn’t as drought tolerant as some of the other varieties of buffalo out there. Its durability is good, with the thick grass providing people and pets with a soft surface to walk and rest on. It also shows great recovery to damage throughout the year. Its maintenance remains low like all Buffo grass, and due to its thickness and high matt, weeds are prevented from growing through.</p>
-                            <a href="./product-single.html"  class="underline text-sm tracking-[0.5px] hover:text-primary inline-block" data-product_id="" data-product_sku="" aria-label="Read more about “Cape Soft leaf Buffalo”">
-                                Read more
-                            </a>
-                            
-                            <button class="block mt-6 bg-primary hover:bg-gray-darker text-center py-4 px-7.5 text-sm rounded-[5px] text-white tracking-[1px] font-bold uppercase w-full transition-colors duration-500 ease-in-out disabled:bg-red disabled:cursor-not-allowed">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="mb-5 md:w-[calc(50%_-_20px)] large:w-[calc(33.33%_-_20px)] xl:w-[calc(25%_-_20px)] md:mx-2.5 border rounded-[5px]">
-                        <a href="./product-single.html" class="w-full">
-                            <img  src="https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-300x300.jpg" class="w-full rounded-t-[5px]" alt="Soft-Leaf-Buffalo-turf" loading="lazy" srcset="https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-300x300.jpg 300w, https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-150x150.jpg 150w, https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px">
-                        </a>
-        
-                        <div class="p-4">
-                            <span class="text-base pb-2 inline-block">
-                                <span class="font-bold">$13.50</span>
-                            </span>
-                            <h2 class="pb-2 text-gray-darker font-semibold text-2xl">Cape Soft leaf Buffalo</h2>
-                            <p class="line-clamp-2 leading-snug">Cape Soft-Leaf Buffalo, a new variety buffalo introduced by <a href="https://theturfman.com.au/">TheTurfMan</a> has an average water usage requirement but isn’t as drought tolerant as some of the other varieties of buffalo out there. Its durability is good, with the thick grass providing people and pets with a soft surface to walk and rest on. It also shows great recovery to damage throughout the year. Its maintenance remains low like all Buffo grass, and due to its thickness and high matt, weeds are prevented from growing through.</p>
-                            <a href="./product-single.html"  class="underline text-sm tracking-[0.5px] hover:text-primary inline-block" data-product_id="" data-product_sku="" aria-label="Read more about “Cape Soft leaf Buffalo”">
-                                Read more
-                            </a>
-                            
-                            <button class="block mt-6 bg-primary hover:bg-gray-darker text-center py-4 px-7.5 text-sm rounded-[5px] text-white tracking-[1px] font-bold uppercase w-full transition-colors duration-500 ease-in-out disabled:bg-red disabled:cursor-not-allowed">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="mb-5 md:w-[calc(50%_-_20px)] large:w-[calc(33.33%_-_20px)] xl:w-[calc(25%_-_20px)] md:mx-2.5 border rounded-[5px]">
-                        <a href="./product-single.html" class="w-full">
-                            <img  src="https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-300x300.jpg" class="w-full rounded-t-[5px]" alt="Soft-Leaf-Buffalo-turf" loading="lazy" srcset="https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-300x300.jpg 300w, https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-150x150.jpg 150w, https://theturfman.com.au/wp-content/uploads/2020/08/turf-type-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px">
-                        </a>
-        
-                        <div class="p-4">
-                            <span class="text-base pb-2 inline-block">
-                                <span class="font-bold">$13.50</span>
-                            </span>
-                            <h2 class="pb-2 text-gray-darker font-semibold text-2xl">Cape Soft leaf Buffalo</h2>
-                            <p class="line-clamp-2 leading-snug">Cape Soft-Leaf Buffalo, a new variety buffalo introduced by <a href="https://theturfman.com.au/">TheTurfMan</a> has an average water usage requirement but isn’t as drought tolerant as some of the other varieties of buffalo out there. Its durability is good, with the thick grass providing people and pets with a soft surface to walk and rest on. It also shows great recovery to damage throughout the year. Its maintenance remains low like all Buffo grass, and due to its thickness and high matt, weeds are prevented from growing through.</p>
-                            <a href="./product-single.html"  class="underline text-sm tracking-[0.5px] hover:text-primary inline-block" data-product_id="" data-product_sku="" aria-label="Read more about “Cape Soft leaf Buffalo”">
-                                Read more
-                            </a>
-                            
-                            <button class="block mt-6 bg-primary hover:bg-gray-darker text-center py-4 px-7.5 text-sm rounded-[5px] text-white tracking-[1px] font-bold uppercase w-full transition-colors duration-500 ease-in-out disabled:bg-red disabled:cursor-not-allowed">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
+                <div class="woocommerce-shipping-fields__field-wrapper">
+                                <p class="form-row textarea Array Order notes Notes about your order, e.g. special notes for delivery. validate-required" id="shipping_first_name_field" data-priority="10"><label for="shipping_first_name" class="">First name&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="shipping_first_name" id="shipping_first_name" placeholder="" value="" autocomplete="given-name"></span></p><p class="form-row form-row-wide" id="shipping_company_field" data-priority="30"><label for="shipping_company" class="">Company name&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="shipping_company" id="shipping_company" placeholder="" value="" autocomplete="organization"></span></p><p class="form-row form-row-wide d-none validate-required" id="shipping_country_field" data-priority="40"><label for="shipping_country" class="">Country / Region&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><strong>Australia</strong><input type="hidden" name="shipping_country" id="shipping_country" value="AU" autocomplete="country" class="country_to_state" readonly="readonly"></span></p><p class="form-row address-field validate-required form-row-wide" id="shipping_address_1_field" data-priority="50"><label for="shipping_address_1" class="">Street address&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="shipping_address_1" id="shipping_address_1" placeholder="House number and street name" value="" autocomplete="address-line1" data-placeholder="House number and street name"></span></p><p class="form-row address-field validate-required form-row-wide" id="shipping_city_field" data-priority="70" data-o_class="form-row form-row-wide address-field validate-required"><label for="shipping_city" class="">Suburb&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="shipping_city" id="shipping_city" placeholder="" value="" autocomplete="address-level2"></span></p><p class="form-row address-field validate-required validate-state form-row-wide" id="shipping_state_field" data-priority="80" data-o_class="form-row form-row-wide address-field validate-required validate-state"><label for="shipping_state" class="">State&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><div class="thsn-select"><select name="shipping_state" id="shipping_state" class="state_select select2-hidden-accessible" autocomplete="address-level1" data-placeholder="Select an option…" data-input-classes="" data-label="State" tabindex="-1" aria-hidden="true"><option value="">Select an option…</option><option value="ACT">Australian Capital Territory</option><option value="NSW">New South Wales</option><option value="NT">Northern Territory</option><option value="QLD">Queensland</option><option value="SA">South Australia</option><option value="TAS">Tasmania</option><option value="VIC">Victoria</option><option value="WA">Western Australia</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-label="State" role="combobox"><span class="select2-selection__rendered" id="select2-shipping_state-container" role="textbox" aria-readonly="true" title="Western Australia">Western Australia</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></div></span></p><p class="form-row address-field validate-required validate-postcode form-row-wide" id="shipping_postcode_field" data-priority="90" data-o_class="form-row form-row-wide address-field validate-required validate-postcode"><label for="shipping_postcode" class="">Postcode&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="shipping_postcode" id="shipping_postcode" placeholder="" value="" autocomplete="postal-code"></span></p></div>
+    
+                
             </div>
-
-</div>
+    
+        </div>
+    <div class="woocommerce-additional-fields">
         
+        
+            
+            <div class="woocommerce-additional-fields__field-wrapper">
+                                <p class="form-row notes" id="order_comments_field" data-priority=""><label for="order_comments" class="">Order notes&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper"><textarea name="order_comments" class="input-text " id="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="2" cols="5"></textarea></span></p>					</div>
+    
+        
+        </div>
+                </div>
+            </div>
+    
+            
+            
+            
+        <h3 id="order_review_heading">Your order</h3>
+        
+        
+        <div id="order_review" class="woocommerce-checkout-review-order">
+            <table class="shop_table woocommerce-checkout-review-order-table">
+        <thead>
+            <tr>
+                <th class="product-name">Product</th>
+                <th class="product-total">Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+                            <tr class="cart_item">
+                        <td class="product-name">
+                            Kikuyu&nbsp;						 <strong class="product-quantity">×&nbsp;4</strong>											</td>
+                        <td class="product-total">
+                            <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>40.00</bdi></span>					</td>
+                    </tr>
+                                    <tr class="cart_item">
+                        <td class="product-name">
+                            Villagegreen Kikuyu&nbsp;						 <strong class="product-quantity">×&nbsp;1</strong>											</td>
+                        <td class="product-total">
+                            <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>11.00</bdi></span>					</td>
+                    </tr>
+                        </tbody>
+        <tfoot>
+    
+            <tr class="cart-subtotal">
+                <th>Subtotal</th>
+                <td><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>51.00</bdi></span></td>
+            </tr>
+    
+            
+            
+                
+                <tr class="woocommerce-shipping-totals shipping">
+        <th>Shipping</th>
+        <td data-title="Shipping">
+            Enter your address to view shipping options.
+            
+                </td>
+    </tr>
+    
+                
+            
+            
+            
+            
+            <tr class="order-total">
+                <th>Total</th>
+                <td><strong><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>51.00</bdi></span></strong> <small class="includes_tax">(includes <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>4.64</span> GST)</small></td>
+            </tr>
+    
+            
+        </tfoot>
+    </table>
+    
+    <div id="payment" class="woocommerce-checkout-payment">
+                <ul class="wc_payment_methods payment_methods methods">
+                <li class="wc_payment_method payment_method_bacs">
+        <input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method" value="bacs" checked="checked" data-order_button_text="">
+    
+        <label for="payment_method_bacs">
+            Direct bank transfer 	</label>
+                <div class="payment_box payment_method_bacs" style="">
+                <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
+            </div>
+        </li>
+    <li class="wc_payment_method payment_method_cod">
+        <input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod" data-order_button_text="">
+    
+        <label for="payment_method_cod">
+            Cash on delivery 	</label>
+                <div class="payment_box payment_method_cod" style="display: none;">
+                <p>Pay with cash upon delivery.</p>
+            </div>
+        </li>
+    <li class="wc_payment_method payment_method_stripe">
+        <input id="payment_method_stripe" type="radio" class="input-radio" name="payment_method" value="stripe" data-order_button_text="">
+    
+        <label for="payment_method_stripe">
+            Credit Card (Stripe) 	</label>
+                <div class="payment_box payment_method_stripe" style="display: none;">
+                <div id="stripe-payment-data" data-email="" data-full-name=" " data-currency="aud"><p>Pay with your credit card via Stripe.</p>
+            <fieldset id="wc-stripe-cc-form" class="wc-credit-card-form wc-payment-form" style="background:transparent;">
+                
+                                <label for="card-element">
+                        Credit or debit card				</label>
+    
+                    <div id="stripe-card-element" class="wc-stripe-elements-field StripeElement StripeElement--empty" style="display: none;"><div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;"><iframe name="__privateStripeFrame7787" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="https://js.stripe.com/v3/elements-inner-card-e7649e9a7bbd8ef9d0afced32e791783.html#locale=en&amp;wait=false&amp;mids[guid]=NA&amp;mids[muid]=9f354daa-1a18-4b00-b3fd-90dd8f530c853220d0&amp;mids[sid]=NA&amp;hidePostalCode=true&amp;style[base][iconColor]=%23666EE8&amp;style[base][color]=%2331325F&amp;style[base][fontSize]=15px&amp;style[base][::placeholder][color]=%23CFD7E0&amp;rtl=false&amp;componentName=card&amp;keyMode=live&amp;apiKey=pk_live_mYP07owoblKsb0IFa95GK3Qk&amp;referrer=https%3A%2F%2Ftheturfman.com.au%2Fcheckout%2F&amp;controllerId=__privateStripeController7781" title="Secure card payment input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; transform: translate(0px) !important; color-scheme: light only !important; height: 18px;"></iframe><input class="__PrivateStripeElement-input" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="1" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: -1px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;"></div></div><div id="pay_forma_i"><input id="usaepay_cc_number" style="border: 0px; width: 60%; padding: 5px; margin: 0;" class="InputElement is-empty Input Input--empty" autocomplete="cc-number" autocorrect="off" spellcheck="false" type="tel" name="cardnumber" data-elements-stable-field-name="cardNumber" aria-label="Credit or debit card number" placeholder="Card number" aria-invalid="false" value=""><input id="usaeapay_expiration" style="border: 0px; width: 20%; padding: 5px; margin: 0;" class="InputElement is-empty Input Input--empty" autocomplete="cc-exp" autocorrect="off" spellcheck="false" type="tel" name="exp-date" data-elements-stable-field-name="cardExpiry" aria-label="Credit or debit card expiration date" placeholder="MM / YY" aria-invalid="false" value=""><input id="usaepay_cc_cid" style="border: 0px; width: 20%; padding: 5px; margin: 0;" class="InputElement is-empty Input Input--empty" autocomplete="cc-csc" autocorrect="off" spellcheck="false" type="tel" name="cvc" data-elements-stable-field-name="cardCvc" aria-label="Credit or debit card CVC/CVV" placeholder="CVC" aria-invalid="false" value=""></div>
+                
+                <!-- Used to display form errors -->
+                <div class="stripe-source-errors" role="alert"></div>
+                            <div class="clear"></div>
+            </fieldset>
+            </div>		</div>
+        </li>
+            </ul>
+            <div class="form-row place-order">
+            <noscript>
+                Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.			<br/><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="Update totals">Update totals</button>
+            </noscript>
+    
+                <div class="woocommerce-terms-and-conditions-wrapper">
+            <div class="woocommerce-privacy-policy-text"></div>
+                </div>
+        
+            
+            <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">Place order</button>
+            
+            <input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="8ddf767f59"><input type="hidden" name="_wp_http_referer" value="/?wc-ajax=update_order_review">	</div>
+    </div>
+    
+        </div>
+      <p><i class="far fa-credit-card"></i>
+    We do not save any credit card information. </p>
+        
+    </form>
     </main>
 
     <!--footer-->
